@@ -5,38 +5,67 @@ public class Tabeller {
 	// a)
 	public static void skrivUt(int[] tabell) {
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden skrivUt ikke implementert");
+		System.out.print("[");
 
+		for (int i = 0; i < tabell.length; i++) {
+			System.out.print(tabell[i] + " ");
+		}
+
+		System.out.println("]");
 	}
 
 	// b)
 	public static String tilStreng(int[] tabell) {
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden tilStreng ikke implementert");
+		String b = null;
+		for (int i = 0; i < tabell.length; i++) {
+			String verdi = Integer.toString(tabell[i]);
+			System.out.print(verdi + " ");
+		}
+		return b;
 	}
 
 	// c)
 	public static int summer(int[] tabell) {
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden summer ikke implementert");
+		int sum = 0;
+
+		System.out.print("[");
+
+		for (int i = 0; i < tabell.length; i++) {
+			System.out.print(tabell[i] + " ");
+			sum = sum + tabell[i];
+
+		}
+		System.out.print("]");
+		System.out.println(" Summen av tabellen: " + sum);
+
+		return sum;
 	}
 
 	// d)
 	public static boolean finnesTall(int[] tabell, int tall) {
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden finnesTall ikke implementert");
+		for (int i : tabell) {
+			if (i == tall) {
+				return true;
+			}
+		}
+		return false;
 
 	}
 
 	// e)
 	public static int posisjonTall(int[] tabell, int tall) {
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden posisjonTall ikke implementert");
+		int a = -1;
+
+		for (int i : tabell) {
+			if (i == tall) {
+				return tall;
+			}
+		}
+		return a;
 	}
 
 	// f)
