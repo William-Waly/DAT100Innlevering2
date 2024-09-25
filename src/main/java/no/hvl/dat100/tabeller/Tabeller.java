@@ -16,13 +16,19 @@ public class Tabeller {
 
 	// b)
 	public static String tilStreng(int[] tabell) {
-
-		String b = null;
-		for (int i = 0; i < tabell.length; i++) {
-			String verdi = Integer.toString(tabell[i]);
-			System.out.print(verdi + " ");
+		
+		StringBuilder a = new StringBuilder();
+		
+		a.append("[");
+		
+		for(int i = 0; i < tabell.length; i++) {
+			a.append(tabell[i]);
+			if (i < tabell.length - 1) {
+				a.append(",");			}
 		}
-		return b;
+		a.append("]");
+		
+		return a.toString();
 	}
 
 	// c)
