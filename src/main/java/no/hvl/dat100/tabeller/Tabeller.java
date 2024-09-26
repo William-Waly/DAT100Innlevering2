@@ -48,22 +48,19 @@ public class Tabeller {
 
 	// b)
 	public static String tilStreng(int[] tabell) {
-	    if (tabell == null || tabell.length == 0) {
-	        return "{}";
-	    }
 		
-		StringBuilder sb = new StringBuilder();
-	    sb.append("{");
+		StringBuilder a = new StringBuilder();
+	    a.append("[");
 	    
 	    for (int i = 0; i < tabell.length; i++) {
-	        sb.append(tabell[i]);
+	        a.append(tabell[i]);
 	        if (i < tabell.length - 1) {
-	            sb.append(",");
+	            a.append(",");
 	        }
 	    }
 
-	    sb.append("}");
-	    return sb.toString();
+	    a.append("]");
+	    return a.toString();
 	}
 
 	// c)
