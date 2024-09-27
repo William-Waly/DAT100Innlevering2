@@ -13,13 +13,19 @@ public class Matriser {
 		}
 	}
 
-	// b)
+	
+   // b)
 	public static String tilStreng(int[][] matrise) {
-
-		// TODO
-		throw new UnsupportedOperationException("Metoden tilStreng ikke implementert");
-		
+	    StringBuilder sb = new StringBuilder();
+	    for (int rad = 0; rad < matrise.length; rad++) {
+	        for (int kol = 0; kol < matrise[rad].length; kol++) {
+	            sb.append(matrise[rad][kol]).append(" ");
+	        }
+	        sb.append("\n");
+	    }
+	    return sb.toString();
 	}
+
 
 	// c)
 	public static int[][] skaler(int tall, int[][] matrise) {
@@ -50,7 +56,4 @@ public class Matriser {
 
 		    return true;
 		}
-
-		
 	}
-	
